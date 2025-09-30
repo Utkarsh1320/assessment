@@ -7,8 +7,8 @@ export class SessionsController {
 
   @Post()
   async create(@Body() body) {
-    const { prompt, responses } = body;
-    return this.sessionsService.create(prompt, responses);
+    const { prompt } = body;
+    return this.sessionsService.create(prompt);
   }
 
   @Get()
